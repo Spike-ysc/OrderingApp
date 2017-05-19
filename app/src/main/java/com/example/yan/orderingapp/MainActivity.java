@@ -1,6 +1,7 @@
 package com.example.yan.orderingapp;
 
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity  {
             if (currentFragment != null) {
                 transaction.hide(currentFragment);
             }
-            transaction.add(R.id.main_fragment, targetfragment)
+            transaction.replace(R.id.main_fragment, targetfragment)
                     .commit();
         } else {
             transaction.hide(currentFragment)

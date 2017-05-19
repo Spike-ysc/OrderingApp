@@ -150,15 +150,15 @@
                 android:id="@+id/setting_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
-            <Button
-
-                android:textColor="@color/white"
-                android:text="退 出 登 录"
-                android:layout_margin="16dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/red"/>
+            <!--<Button-->
+                <!--android:id="@+id/back_btn"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:text="退 出 登 录"-->
+                <!--android:layout_margin="16dp"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/red"/>-->
         </LinearLayout>
         <View
             android:layout_width="match_parent"

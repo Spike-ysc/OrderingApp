@@ -30,4 +30,5 @@
     <color name="white">#FFFFFF</color>
 
     <color name="login_bg_color">#eccfd1</color>
+    <color name="dividerColor">#f0f4f5</color>
 </resources>

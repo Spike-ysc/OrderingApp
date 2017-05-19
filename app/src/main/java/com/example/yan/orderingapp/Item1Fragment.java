@@ -1,11 +1,13 @@
 package com.example.yan.orderingapp;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -32,6 +34,18 @@ public class Item1Fragment extends Fragment {
         initMessage();
         adapter = new MealAdapter(getActivity(), R.layout.meal_list,mMealMessageList);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(), BuyActivity.class);
+                MealMessage meals = mMealMessageList.get(position);
+                intent.putExtra("food_Name",meals.getFoodName());
+                intent.putExtra("food_message",meals.getFootMessage());
+                intent.putExtra("money", meals.getMoney());
+                intent.putExtra("imageId", meals.getImageId());
+                startActivity(intent);
+            }
+        });
         // Inflate the layout for this fragment
         return view;
     }
@@ -41,4 +55,6 @@ public class Item1Fragment extends Fragment {
             mMealMessageList.add(meals);
         }
     }
+
 }
+

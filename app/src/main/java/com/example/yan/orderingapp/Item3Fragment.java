@@ -2,6 +2,7 @@ package com.example.yan.orderingapp;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -25,6 +27,7 @@ import static android.os.Build.VERSION_CODES.M;
 public class Item3Fragment extends Fragment {
 
     private List<MySetting> mMySettingList = new ArrayList<>();
+    private Button backBtn;
 
     public Item3Fragment() {
         // Required empty public constructor
@@ -39,6 +42,15 @@ public class Item3Fragment extends Fragment {
         SettingAdapter adapter = new SettingAdapter(getActivity(), R.layout.setting_list,mMySettingList);
         ListView listView = (ListView) view.findViewById(R.id.setting_list);
         listView.setAdapter(adapter);
+//        backBtn = (Button)view.findViewById(R.id.back_btn);
+//        backBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ActivityCollector.finishAll();
+//                Intent intent = new Intent(getContext(), LoginActivity.class);
+//                getContext().startActivity(intent);
+//            }
+//        });
         // Inflate the layout for this fragment
         return view;
     }
